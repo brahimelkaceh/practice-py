@@ -102,35 +102,74 @@ programmingLanguages = {
 # print(f'Hello {userN}, your website is : {userS}')
 
 
-age = int(input('Please enter your age : '))
+# age = int(input('Please enter your age : '))
 
-unit = input('Please enter your unit months, weeks, days, hours, minutes, seconds : ').strip().lower()
+# unit = input('Please enter your unit months, weeks, days, hours, minutes, seconds : ').strip().lower()
 
-months = age * 12
+# months = age * 12
 
-weeks =  months * 4
-days = age * 365
+# weeks =  months * 4
+# days = age * 365
 
-hours = days * 24
+# hours = days * 24
 
-minutes = hours * 60
+# minutes = hours * 60
 
-seconds = minutes * 60
+# seconds = minutes * 60
 
-if unit == 'months':
-    print(f'your age by months is : {months}')
-elif unit == 'weeks':
-    print(f'your age by weeks is : {weeks}')
-elif unit == 'days':
-    print(f'your age by days is : {days}')
-elif unit == 'hours':
-    print(f'your age by hours is : {hours}')
-elif unit == 'minutes':
-    print(f'your age by minutes is : {minutes}')
-elif unit == 'seconds':
-    print(f'your age by seconds is : {seconds}')
-else : print(f'the unit that you chose is not correct #{unit}# , please try again')
+# if unit == 'months':
+#     print(f'your age by months is : {months}')
+# elif unit == 'weeks':
+#     print(f'your age by weeks is : {weeks}')
+# elif unit == 'days':
+#     print(f'your age by days is : {days}')
+# elif unit == 'hours':
+#     print(f'your age by hours is : {hours}')
+# elif unit == 'minutes':
+#     print(f'your age by minutes is : {minutes}')
+# elif unit == 'seconds':
+#     print(f'your age by seconds is : {seconds}')
+# else : print(f'the unit that you chose is not correct #{unit}# , please try again')
 
 
 
 # print(f'your age by months : {months} /n by weeks : {weeks} /n by days : {days} /n by hours : {hours} /n by minutes : {minutes} /n by seconds : {seconds} ') 
+
+admins = ['adam', 'james', 'john', 'fred' ]
+
+user = input('Please enter your username : ').strip().lower()
+
+if user in admins: 
+    print(f'Hello {user}, you are welcome!')
+
+    option = input('do you want to Delete or Update your name ? ').strip().lower()
+
+    if option == 'delete' or option == 'd' :
+        admins.remove(user)
+        print(f'your account has been deleted successfully!')
+        print('#' * 50)
+        print(admins)
+
+    elif option == 'update' or option == 'u' :
+        new_name = input('Please enter your new name : ').strip().lower()
+        admins[admins.index(user)] = new_name
+        print(f'your name has been updated successfully!')
+        print('#' * 50)
+        print(admins)
+    else :
+        print(f'your option is not correct #{option}# , please try again')
+
+else : 
+    print(f'Hello {user}, you are not authorized to access this system!')
+    print('#' * 50)
+
+    status = input('Do you want to access this system ? Y or N : ').strip().lower()
+
+    if status == 'y' or status == 'yes' :
+        admins.append(user)
+        print(f'your account has been created successfully!')
+        print('#' * 50)
+        print(admins)
+        
+    elif status == 'n' or status == 'no' :
+        print(f'goodbye {user}!')
