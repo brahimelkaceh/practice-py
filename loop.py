@@ -51,12 +51,12 @@ skills = {
     'skill 3' : 90,
 }
 
-for skill in skills : 
-    print(f"Skill{skill} => {skills[skill]}")
+# for skill in skills : 
+#     print(f"Skill{skill} => {skills[skill]}")
 
 
-for skill, progress in skills.items(): 
-    print(f"Skill{skill} => {progress}")
+# for skill, progress in skills.items(): 
+#     print(f"Skill{skill} => {progress}")
 
 
 mySkills = {
@@ -70,8 +70,20 @@ mySkills = {
     }
 }
 
-print('#' * 50)
-for skill , language in mySkills.items():
-    print(f"{skill}")
-    for language, progress in language.items():
-        print(f"{language} => {progress}%")
+# print('#' * 50)
+# for skill , language in mySkills.items():
+#     print(f"{skill}")
+#     for language, progress in language.items():
+#         print(f"{language} => {progress}%")
+
+
+list1 = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9]
+listing = ['A' , 'B' , 'C' , 'D' , 'E' , 'F']
+tuple1 = ('man 1' , 'man 2' , 'man 3')
+dict1 = {'name' :'bob' , 'age' : 20 }
+ultimate = zip(list1 , listing , tuple1 , dict1)
+
+print(ultimate)
+
+for pair1 , pair2 , pair3 , pair4 in ultimate:
+    print(pair1 , pair2 , pair3 , pair4)

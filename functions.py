@@ -15,7 +15,7 @@
 #     'javascript': 75,
 # }
 # def getSkills(name = 'uknown', *skills , **kwargs ):
-    
+
 #     print(f'{name.capitalize()},\nHas the following skills:')
 #     for skill in skills:
 #         print(f'- {skill}')
@@ -33,11 +33,10 @@ def cleanWord(word):
 
     if len(word) == 1:
         return word
-    
+
     if word[0] == word[1]:
-        
         return cleanWord(word[1:])
-    
+
     return word[0] + cleanWord(word[1:])
 
 
